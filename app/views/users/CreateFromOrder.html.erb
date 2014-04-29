@@ -1,0 +1,27 @@
+<div class="box">
+ <p class="textSimpleLeft">Would you like to create an account?</p>
+ <p class="textSmallLeft">If not, simply close this window. Your order confirmation will arrive shortly</p>
+ <p class="textSmallLeft">If yes, create your password for logging into your account and click on "Create User":</p>
+ <%= form_for @user do |f| %>
+	<%= f.hidden_field :email %>
+	<%= f.hidden_field :user_name %>
+	<%= f.hidden_field :user_country %>
+	<%= f.hidden_field :user_address %>
+	<%= f.hidden_field :user_city %>
+	<%= f.hidden_field :user_zip %>
+	<%= f.hidden_field :user_province %>
+	<br />
+	<div class="textSmallLeft">
+		<%= f.label :password %>
+		<%=f.password_field :password%><br />
+	
+	
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	
+		<br />
+		<%= f.submit %>
+	</div>
+	
+ <% end %> 
+</div>

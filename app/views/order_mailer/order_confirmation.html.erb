@@ -1,0 +1,20 @@
+<p style="color: #424242;font-size: 12pt;font-variant: small-caps;text-align: center;font-family: Georgia;">
+	Dear &nbsp;<%=@order.name%><br />
+	QLine thanks you for ordering. Hope you enjoyed your shopping experience<br />
+	Your order information: 
+</p>
+<table style="color: black;font-size: 12pt;font-variant: small-caps;text-align: center;font-family: Georgia;">
+  <% for product in @products %>
+	<% for line_item in @line_items %>
+		<% if product.id == line_item.product_id %>
+		  <tr>
+	    	<td><%= product.title %></td>
+	    	<td><%= product.price %>$</td>
+	    	<td><%= product.colour %></td>
+	    	<td><%= product.size %></td>
+		  </tr>
+	    <% end %>
+	<% end %>	
+  <% end %>
+</table>
+<hr />

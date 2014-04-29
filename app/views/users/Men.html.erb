@@ -1,0 +1,37 @@
+<%= render :partial => 'layouts/menMenu' %>
+
+
+<table class="center colorwhite">
+            <tr>
+                <td class="header"></td>
+                <td class="header"></td>
+                <td class="header"></td>
+                <td class="header"></td>
+                
+            </tr>
+            
+	        <tr>
+                <td><%= link_to (image_tag("sweater_men.jpg", :alt=>"sweater")), show_path(:category_id => "Sweaters") %><br /><span class="textSimpleHeading"><%= link_to "Sweaters", show_path(:category_id => "Sweaters") %></span></td>
+                <td><%= image_tag("store_view1.jpg", :alt=>"home") %><br /><br /></td>
+                <td><%= link_to (image_tag("shirt_men.jpg", :alt=>"shirt")), show_path(:category_id => "Shirts") %><br /><span class="textSimpleHeading"><%= link_to "Shirts", show_path(:category_id => "Shirts")  %></span></td>
+                
+            </tr>
+            
+             
+            <tr>
+                <td><%= link_to (image_tag("tshirt_men.jpg", :alt=>"tshirt")), show_path(:category_id => "TShirtM") %><br /><span class="textSimpleHeading"><%= link_to "T-Shirts", show_path(:category_id => "TShirtM") %></span></td>
+                <td><%= image_tag("store_view2.jpg", :alt=>"home") %><br /><br /></td>
+                <td><%= link_to (image_tag("shoes_men.jpg", :alt=>"shoes")), show_path(:category_id => "ShoesM") %><br /><span class="textSimpleHeading"><%= link_to "Men Shoes", show_path(:category_id => "ShoesM") %></span></td>
+                
+            </tr>
+              
+<tr>
+                <td class="header"></td>
+                <td class="header"></td>
+                <td class="header"></td>
+                <td class="header"></td>
+            </tr>
+             
+         </table>
+
+

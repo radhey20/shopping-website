@@ -1,0 +1,35 @@
+<div class="box"> 
+    <p class="textHeading">Order History:</p>
+	<% if current_user && @orders[0] != nil %>
+	    <table border=1px>
+	    	<tr>
+	    		<td class="textMenuHeading">Order number </td>
+	    		<td class="textMenuHeading">Order date </td>
+	    		<td class="textMenuHeading">Order total </td>
+	    		<td class="textMenuHeading">Garments </td>
+	    	</tr>
+		 <% for order in @orders %>
+		 	<tr>
+			<td class="textSimple"><%= order.id%></td>
+			<td class="textSimple"><%= order.created_at.strftime("%m/%d/%Y")%></td>
+			<td class="textSimple">$<%= order.total %>0</td>
+			 <td class="textSimple">
+			<%for line_item in @line_items %>
+				<% if line_item.order_id == order.id %>
+				   
+					<% for product in @products %>
+						<% if product.id == line_item.product_id %>
+							<p><%= product.title %></p>
+						<% end %>
+					<% end %>
+				<% end %>
+			<% end %> 
+				</td>
+		 	</tr>
+		 <% end %>
+	    </table>
+	<% else %>
+        <br />
+		<p class="textSimpleHeading">There is no Order History available for display</p>
+	<% end %>
+</div>

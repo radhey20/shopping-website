@@ -1,0 +1,56 @@
+
+    <div class="featuresColumn">
+        <p class="textHeading">Company Contacts:</p>
+    </div>
+    <br /> <br /> 
+            <br /> <br /> <br />
+        <p class="textSimpleHeading">General inquiries: 1-800-QLine-Go
+        <br /> General E-mail: Qline@i.com
+<br />
+        <br /> Company Director:
+        <br />Maryna Moskalenko
+<br />
+         <br /> Company Members:
+         <br /> Bria Lubiens
+         <br />Anton Kikets
+         <br />Radhey Shah
+         <br />Roman Vladinsky
+<br />
+        <br /> Contact E-mail: railscs372@gmail.com</p>
+        
+        <p class="textSimpleLeft"> If you have any immediate questions please send them directly using the following form:</p>
+
+
+
+
+<div class="textSimpleHeading">
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br /><br />
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %><br /><br />
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment, rows: 5, cols: 40 %><br /><br /><br />
+  </div>
+  <div class="actions">
+    <%= f.submit :Submit%>
+  </div>
+<% end %>
+</div>

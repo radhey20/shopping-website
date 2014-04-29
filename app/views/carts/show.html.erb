@@ -1,0 +1,49 @@
+<div class="box">
+    <div class="textHeading">Your Cart</div><br />
+	<div class="textSimple"><%= link_to "Continue Shopping", lookbook_path %></div>
+	<% if notice %>
+		<p id="notice"><%= notice %></p>
+    <% end %>
+    <table>
+        <tr>
+		    <td><div class="textCartHeading">Title</div></td>
+		    <td><div class="textCartHeading">Price</div></td>
+		    <td><div class="textCartHeading">Colour</div></td>
+		    <td><div class="textCartHeading">Size</div></td>
+		    <td><div class="textCartHeading">Quantity</div></td>
+		    <td><div class="textCartHeading">Update</div></td>
+                     <td><div class="textCartHeading">Delete</div></td>
+		 </tr>
+	    <% @cart.line_items.each do |item| %>
+             <tr>
+	     <%= form_for(item.product) do |f| %>
+	     
+		    <td><div class="textSimple"><%= item.product.title %></div></td>
+		    <td><div class="textSimple">$<%= item.product.price %></div></td>
+		    <td><%= f.select(:colour, @colours) %></td>
+		    <td><%= f.select(:size, @sizes) %></td>
+		    <td><%= f.text_field :quantity, size: 1, value: item.product.quantity %></td>
+		    <td><%= f.submit 'Change Item',  :type => :image, :src => "/assets/checkmark.jpeg", :width => "30"%></td>
+                    
+		
+		 <% end %>
+                    <td><%=  button_to 'Delete', item, method: :delete, confirm: 'Are you sure?'  %></td>
+             </tr>
+       <% end %>
+    </table>
+    <table>
+       <tr>
+	       <td><div class="textSimpleHeading">Total Price</div></td>
+	       <td><div class="textSimple"><%= number_to_currency(@cart.total_price) %></div></td>
+	   </tr>
+	   <tr>
+       		<td><br /></td>
+       		<td><br /></td>
+       </tr>
+	   <tr>
+	       <td><div class="textSimpleHeading"> <%= button_to "Checkout", new_order_path, method: :get %></div></td>
+	       <td><div class="textSimple"><%= button_to 'Empty Cart', @cart, method: :delete, confirm: 'Are you sure?' %></div></td>
+	   </tr>
+	
+    </table>  
+</div>

@@ -1,0 +1,398 @@
+#container
+{
+    
+    width:1024px;
+    margin: 0 auto;
+    
+   
+}
+
+body
+{
+	
+   background-image: url(balloon_frame2.jpg);
+   width:100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#header
+{
+	margin: 0 auto;
+    width: 1024px;
+    height:250px;
+    
+    
+}
+
+#categMenu ul li { 
+display: inline; 
+padding-left: 15px;
+padding-right: 15px;
+}
+
+hr {color=#424242; size=3px; }
+
+#menu ul
+{
+ margin: 0px;
+ padding-top: 10px;
+ text-align: center;
+ list-style-type: none;
+ border-bottom: 2px solid grey;
+ border-top: 2px solid grey;
+}
+
+#menu ul li { display: inline; }
+
+ul
+{
+   list-style-type: none;
+
+}
+
+   
+a:visited {color:#0F3314;}
+a:hover {color:#255492;}
+a { text-decoration:none; color:#111124;}
+
+
+#leftnav
+{
+    float: left;
+    height: 1340px;
+  
+}
+
+#rightnav
+{
+    float: right;
+    height: 1340px; 
+    
+}
+
+#content
+ {
+ width: 800px;
+ padding:20px;
+ margin: 30px auto;
+
+ }
+
+ 
+.featuresColumn {float: left; width: 22%; margin-right: 4%;}
+.featuresColumnWide {float: left; width: 44%; margin-right: 4%;}
+.break {float: left; width: 4%; margin-right: 1%;}
+.last {margin-right: 0}
+
+.box
+{
+
+ width:600px;
+
+ padding:50px;
+ border:0px;
+ margin:0px auto;
+}
+
+#rotator
+{
+
+ width:600px;
+ margin:0px auto;
+}
+
+.minibox
+{
+
+width:180px;
+height: 250px;
+ border:0px solid gray;
+ margin:10px;
+ float:left;
+}
+
+
+
+
+.menuHeading 
+{
+  border-left: none;
+  font-family:  "Adobe Caslon Pro",'Hoefler Text', Georgia, 'Times New Roman', serif;
+  color: #6699CC;
+  font-weight: normal;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.textHeading
+{
+  font-family:  "Adobe Caslon Pro",'Hoefler Text', Georgia, 'Times New Roman', serif;
+  color: #6699CC;
+  font-weight: normal;
+  font-size: 1.75em;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  margin:0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.textSimpleHeading:first-letter{ text-transform: uppercase;}
+.textMenuHeading
+{
+     
+
+    color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-transform: lowercase;
+	line-height: 145%;
+	font-size: 15pt;
+	font-variant: small-caps;
+	border-left: 2px solid grey;
+	text-align: center;
+        
+}
+
+.textSimpleHeading
+{
+     
+
+    color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-align: right;
+	text-transform: lowercase;
+	line-height: 100%;
+	font-size: 15pt;
+	font-variant: small-caps;
+        
+}
+
+.textErrorHeading
+{
+     
+
+    color: #ca596e;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-align: right;
+	text-transform: lowercase;
+	font-size: 10pt;
+	font-variant: small-caps;
+        
+}
+
+.textUserHeading
+{
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	float: right;
+	text-transform: lowercase;
+	font-size: 11pt;
+	font-variant: small-caps;
+        
+}
+
+.whiteBack
+{
+	border: 1px solid black;
+	border-radius: 7px;
+	margin-left: 3px;
+	margin-right: 3px;
+	background-color: white
+}
+
+.textOrderHeading
+{
+     
+
+    color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-align: right;
+	text-transform: lowercase;
+	font-size: 12pt;
+	font-variant: small-caps;
+        
+}
+
+.textSimpleHeadingLeft
+{
+     
+
+    color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-align:left;
+	margin: 5px auto;
+	text-transform: lowercase;
+	line-height: 145%;
+	font-size: 15pt;
+	font-variant: small-caps;
+        
+}
+
+.textSimple
+{
+  color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 12pt;
+	font-variant: small-caps;
+	text-align: center;  
+}
+
+.textSimpleLeft
+{
+  color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 15pt;
+	font-variant: small-caps;
+	text-align: left;
+ 
+}
+
+.textSmallLeft
+{
+  color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 11pt;
+	font-variant: small-caps;
+	text-align: left;
+ 
+}
+
+
+
+.floatRight
+{float: right;}
+
+
+.noborders {border:hidden;}
+
+ 
+table
+ {
+ width: 680px;
+ border-collapse:collapse;
+ text-align: center;
+ margin: 0 auto;
+ margin-top: 50px;
+ }
+ 
+ td {
+    border-bottom:0px;
+    font-family: Arial;
+    font-size: large;
+    padding-top:15px;
+    
+}
+    
+    td.header
+    {
+
+        background-color: lightgrey; color: black;
+    }
+    
+    td.item
+    {
+        color: grey;
+        font-style: oblique;
+        
+    }
+    
+   h3
+    {
+        display: inline;
+        color: blue;
+        font-family: Verdana;
+        font-size: 14pt;
+        
+        
+    }
+    
+ 
+
+
+.center
+  {
+    margin-left: 0 auto; 
+    margin-right: 0 auto;
+  }
+  
+  table.colorwhite{background-color: #E8E8E8; color: black;}
+  .colorwhite {color: #FFFFFF;}
+
+#footer
+{
+    clear: both;
+}
+
+
+
+
+.box2
+{
+position:relative;
+ width:600px;
+height:400px;
+ padding:10px;
+ margin:10px auto;
+}
+.devider
+{
+    position:absolute;
+    left: 42%;
+    top:5%;
+    bottom:5%;
+    border-left:2px solid grey;
+}
+.minibox2
+{
+width:100px;
+height: 160px;
+ margin:10px;
+ float:left;
+}
+
+.minibox3
+{
+width:250px;
+ margin:10px;
+ text-align: center
+}
+
+.noteText {
+	color: #327a94;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 10pt;
+	padding-top: 10px;
+	font-variant: small-caps;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.textCartHeading
+{
+     
+
+    color: #6699CC;
+    border-bottom: 1px dotted #6699CC;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-transform: lowercase;
+	line-height: 145%;
+	font-size: 15pt;
+	font-variant: small-caps;
+	text-align: center;
+        
+}
+
+.addToCart
+{
+    position:absolute;
+    left: 42%;
+
+}

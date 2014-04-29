@@ -1,0 +1,21 @@
+<% if (@category.category_id=="ShoesW" || @category.category_id=="Skirts" || @category.category_id=="Dresses" || @category.category_id=="Cardigans")%>
+<%= render :partial => "layouts/womenMenu" %>
+<%else%>
+<%= render :partial => "layouts/menMenu" %>
+<%end%>
+<div class="box">
+
+ <% for product in @products %>
+   <div style="float: left">
+    <p>
+      <% if (product.photo_file_name != nil && product.category==@category.category_id)%>
+      <div class="minibox">
+	    <div class="textSimple"><%= link_to( image_tag(product.photo.url(:thumb), :size => '120x150'), product_path(product) ) %></div>
+	    <div class="textSimple"><%= link_to product.title,product_path(product) %></div><br />
+	    <div class="textSimple"><%= product.price %> $</div>
+	  </div>
+     <% end %>
+   </p>
+  </div>
+ <% end %>
+</div>

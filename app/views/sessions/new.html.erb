@@ -1,0 +1,19 @@
+<div class="box">
+<div class="textSimpleHeading">
+<p class="textHeading">Log In</p>
+
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>
+<br /><br /><br />
+<div class="textSimple"><%= link_to "Click here if you want to log in as Admin User", admin_index_path %></div>
+</div>
+</div>

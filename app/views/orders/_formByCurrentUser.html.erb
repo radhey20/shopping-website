@@ -1,0 +1,62 @@
+<%= form_for(@order) do |f| %>
+ <% if @order.errors.any? %>
+	    <br />
+		<h2 class="textSimpleHeading"><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+		<ul>
+			<% @order.errors.full_messages.each do |msg| %>
+				<li class="textSimpleHeading"><%= msg %></li>
+			<% end %>
+		</ul>
+<% end %>
+<br /><br />
+<div class="textOrderHeading">
+	<%= f.label :name %>
+	<%= f.text_field :name, size: 40, :value => current_user.user_name %>
+	<br />
+
+	<%= f.label :email %>
+	<%= f.email_field :email, size: 40, :value => current_user.email%>
+	<br />
+
+	<%= f.label :country %>
+	<%= f.text_field :country, size: 40, :value => current_user.user_country %>
+
+	<br />
+
+	<%= f.label :address %>
+	<%= f.text_field :address, size: 40, :value => current_user.user_address %>
+
+	<br />
+	<%= f.label :city %>
+	<%= f.text_field :city, size: 40, :value => current_user.user_city %>
+
+	<br />
+	<%= f.label :state %>
+	<%= f.text_field :state, size: 40, :value => current_user.user_province %>
+
+	<br />
+
+	<%= f.label :zip %>
+	<%= f.text_field :zip, size: 40, :value => current_user.user_zip %>
+
+
+    <br />
+	<%= f.label "card number" %>
+	<%= f.text_field :card_number, size: 40 %>
+
+    <br />
+	<%= f.label :cvc %>
+	<%= f.text_field :cvc, size: 40 %>
+
+	<br />
+
+	<%= f.label :expiry_Date %> 
+	<%= f.date_select :expiry_Date %>
+
+	<br /><br /><br />
+
+	<%= f.submit 'Place Order' %>
+	<%= f.submit 'Cancel Order' %>
+</div>
+<% end %>
+

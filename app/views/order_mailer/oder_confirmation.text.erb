@@ -1,0 +1,14 @@
+
+	Dear &nbsp;<%=@order.name%>
+	QLine thanks you for ordering. Hope you enjoyed your shopping experience
+	Your order information: 
+
+  <% for product in @products %>
+	<% for line_item in @line_items %>
+		<% if product.id == line_item.product_id %>
+	    	<%= product.title %>
+	    	<%= product.price %>$
+	    <% end %>
+	<% end %>	
+  <% end %>
+

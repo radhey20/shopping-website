@@ -1,0 +1,27 @@
+<div>
+  <p>
+ <% if (@product.photo?) %>
+     <div class="box2">
+        <p class="textSimpleHeadingLeft"><%= @product.title %></p>
+        <p class="textSimpleHeadingLeft"><%= @product.price %> $</p>
+        <div class="minibox2"><%= image_tag @product.photo.url(:medium) %></div>
+        <div class="devider"></div>
+        <div class="floatRight">
+        	<p class="textSimple minibox3"><%= @product.description %></p>
+        	 <p class="noteText">Select desired colour, size and click on checkmark</p>
+            <%= form_for(@product) do |f| %>
+        		<p class="textSimple">
+        		    <%= f.select(:colour, @colours) %>
+        			<%= f.select(:size, @sizes) %>
+        			<%= f.submit 'Select Item',  :type => :image, :src => "/assets/checkmark.jpeg", :width => "30"%>
+        		</p>
+           <% end %>
+          
+        </div>
+    </div>
+          
+         
+	<div class="textSimple"><%= button_to 'Add to Cart', line_items_path(product_id: @product) %></div>
+<% end %>
+  </p>
+  </div>

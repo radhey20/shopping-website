@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>QLine</title>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="header"> 
+ <span class = "floatRight"><%= link_to (image_tag("history_button.png", :alt=>"history", :size => "50x50")), history_path %></span>
+     <span class = "floatRight"> <%= link_to (image_tag("shopping_cart_button.png", :alt => "shopping_cart_button", :size => "50x50")), cart_path(current_cart)%></span>
+ <div class="textUserHeading">
+  <br />
+  <span class="whiteBack">
+  <% if current_user %>
+    &nbsp;Logged in as: <%= current_user.user_name %>.&nbsp;
+    <%= link_to "Log out", log_out_path %>&nbsp;
+  <% else %>
+    &nbsp;<%= link_to "Sign up", sign_up_path %> or
+    <%= link_to "Log in ", log_in_path %>&nbsp;
+  <% end %>
+  </span>
+ </div>
+
+
+   <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+   <% end %>
+ </div>
+<div id="container"> 
+    
+
+      <div id="menu">
+        <ul>
+            <li><%= link_to (image_tag("home_button.png", :alt=>"home")), home_path %></li>
+            <li><%= link_to (image_tag("lookbook_button.png", :alt=>"home")), lookbook_path %> &nbsp;</li>
+            <li><%= link_to (image_tag("contacts_button.png", :alt=>"home")), contactus_path %>&nbsp; &nbsp;</li>
+            <li><%= link_to (image_tag("aboutus_button.png", :alt=>"home")), aboutus_path %>&nbsp;</li>
+            <li><%= link_to (image_tag("sources_button.png", :alt=>"home")), sourses_path %></li>
+        </ul>
+        
+    </div>
+   <div id="content"> <%= yield %></div>
+
+    <div id="footer"> <p><%= image_tag("footer.png", :alt=>"Footer Image") %></p> </div>
+
+</body>
+</html>
